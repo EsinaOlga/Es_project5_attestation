@@ -48,7 +48,7 @@ public class App {
                 for (Product p : product) {
                     if (p.getName_product().equalsIgnoreCase(name_pr)) {
                         System.out.println("Вы выбрали продукт " + p.getName_product() + ", стоимостью " + p.getCost()+" руб.");
-                        if (p.getCost() < person.getSum_money()) {
+                        if (p.getCost() <= person.getSum_money()) {
                             //System.out.println("Вам хватает на покупку продукта - " + p.getName_product());
                             initialPaket.add(p.getName_product());//Добавляем продукт в пакет
                             person.setSum_money(person.getSum_money() - p.getCost());
@@ -69,10 +69,12 @@ public class App {
         else { System.out.println(person.getName_person()+" купил(а) следующие продукты: ");
             for (String item : initialPaket) {
                     System.out.println(" - " + item);
+                System.out.println("Благодарим за покупку!");
+
                 }
             }
         System.out.println(person.getSum_money() + " руб. - остаток средств на счете");
-        System.out.println("Благодарим за покупку!");
+        //System.out.println("Благодарим за покупку!");
         }
 
 
