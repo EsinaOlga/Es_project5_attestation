@@ -30,7 +30,7 @@ public class App {
         product.add(new Product("Кофе растворимый", 879.0));
         product.add(new Product("Масло", 150.0));
 
-        String[] prod = {"Хлеб", "Масло", "Кофе", "Молоко", "Торт"};//задаем список продуктов
+        String[] prod = {"Хлеб", "Масло", "Кофе растворимый", "Молоко", "Торт"};//задаем список продуктов
         //for (String pr : prod) {
             int index = 0;
             while (true) {
@@ -69,9 +69,8 @@ public class App {
         else { System.out.println(person.getName_person()+" купил(а) следующие продукты: ");
             for (String item : initialPaket) {
                     System.out.println(" - " + item);
-                System.out.println("Благодарим за покупку!");
-
-                }
+                                }
+            System.out.println("Благодарим за покупку!");
             }
         System.out.println(person.getSum_money() + " руб. - остаток средств на счете");
         //System.out.println("Благодарим за покупку!");
